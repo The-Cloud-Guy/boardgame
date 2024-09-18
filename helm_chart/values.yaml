@@ -1,0 +1,17 @@
+replicaCount: 2
+
+image:
+  repository: thecloudguyn/boardgame
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 8080
+  nodePort: 30007
+
+containerPort: 8080
+
+labels:
+  app: boardgame-service 
